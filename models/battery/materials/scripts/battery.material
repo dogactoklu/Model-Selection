@@ -1,0 +1,25 @@
+material Battery/Body
+{
+  technique
+  {
+    pass ambient diffuse specular
+    {
+      ambient 0 0 0 1
+      diffuse 0 0 0 1
+      specular 0 0 0 1
+    }
+  }
+}
+
+material Battery/Head
+{
+  technique
+  {
+    pass ambient diffuse specular
+    {
+      ambient 0.72 0.45 0.20 1
+      diffuse 0.72 0.45 0.20 1
+      specular 0.72 0.45 0.20 1
+    }
+  }
+}

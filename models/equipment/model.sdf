@@ -1,0 +1,60 @@
+<sdf version='1.6'>
+  <model name='equipment'>
+
+    <plugin name='equipment' filename='libBatteryPlugin.so'>
+    </plugin>
+
+    <pose frame=''>0 0 0.21 0 0 0</pose>
+    <link name='battery'>
+      <gravity>0</gravity>
+      <pose frame=''>0 0 0 0 0 0</pose>
+      <sensor name='contact_sensor' type='contact'>
+        <contact>
+          <collision>battery</collision>
+          <topic>__default_topic__</topic>
+        </contact>
+      </sensor>
+
+      <collision name='battery'>
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <visual name='body'>
+        <pose frame=''>0 0 -0.05 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+              <radius>0.05</radius>
+              <length>0.3</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://battery/materials/scripts/</uri>
+            <name>Battery/Body</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name='head'>
+        <pose frame=''>0 0 0.15 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+              <radius>0.05</radius>
+              <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://battery/materials/scripts/</uri>
+            <name>Battery/Head</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
