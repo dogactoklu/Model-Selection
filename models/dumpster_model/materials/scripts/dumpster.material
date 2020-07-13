@@ -1,4 +1,4 @@
-material wheelie_bin/Body
+material Dumpster/Body
 {
   technique
   {

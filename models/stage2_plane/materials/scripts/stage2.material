@@ -1,0 +1,15 @@
+material Stage2/Material
+{
+  technique
+  {
+    pass ambient diffuse specular
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      texture_unit
+      {
+        texture placeholder.png
+      }
+    }
+  }
+}
